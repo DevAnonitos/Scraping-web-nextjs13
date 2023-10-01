@@ -33,6 +33,8 @@ const Home = () => {
 
             <SearchBar />
           </div>
+
+          <HeroCarousel />
         </div>
       </section>
 
