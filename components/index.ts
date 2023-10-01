@@ -3,7 +3,7 @@ import Modal from "./Modal";
 import Navbar from "./Navbar";
 import PriceInfoCard from "./PriceInfoCard";
 import ProductCard from "./ProductCard";
-import SearchBar from "./Searchbar";
+import SearchBar from "./SearchBar";
 
 export {
     HeroCarousel,
