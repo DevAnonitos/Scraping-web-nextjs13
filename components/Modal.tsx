@@ -92,6 +92,14 @@ const Modal = ({ productId }: Props) => {
                                             onClick={closeModal}
                                         />
                                     </div>
+
+                                    <h4 className='dialog-head-text'>
+                                        Stay updated with product pricing alerts right in your inbox!
+                                    </h4>
+
+                                    <p className='text-sm text-gray-600 mt-2'>
+                                        Never miss a bargain again with our timely alerts!
+                                    </p>
                                 </div>
                             </div>
                         </Transition.Child>
