@@ -2,7 +2,7 @@ import React from 'react';
 import { 
   HeroCarousel, 
   SearchBar, 
-  ProductCard 
+  ProductCard,
 } from '@/components';
 import Image from 'next/image';
 
