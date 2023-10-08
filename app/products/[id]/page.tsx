@@ -8,11 +8,20 @@ import {
     ProductCard 
 } from '@/components';
 
+import { Product } from '@/types';
+import { formatNumber } from '@/lib/utils';
 
+type Props = {
+    params: { id: string, },
+};
 
-const ProductDetails = async () => {
+const ProductDetails = async ({ params: { id } }: Props) => {
     return (
-        <div>page</div>
+        <div className='product-container'>
+            <div className='flex gap-28 xl:flex-row flex-col'>
+                
+            </div>
+        </div>
     );
 };
 
