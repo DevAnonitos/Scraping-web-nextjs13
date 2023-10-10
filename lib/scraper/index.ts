@@ -2,6 +2,11 @@
 
 import axios from "axios";
 import * as cheerio from "cheerio";
+import { 
+    extractPrice, 
+    extractCurrency, 
+    extractDescription 
+} from "../utils";
 
 export async function scrapeAmazonProduct(url: string) {
 
@@ -36,6 +41,12 @@ export async function scrapeAmazonProduct(url: string) {
         const title = $("#productTitle").text().trim();
 
         console.log({ title });
+        const currentPrice = extractPrice(
+            $('.priceToPay span.a-price-whole'),
+            $('.a.size.base.a-color-price'),
+            $('.a-button-selected .a-color-base'),
+        );
+        console.log(currentPrice);
 
     } catch (error: any) {
         console.log(error);
