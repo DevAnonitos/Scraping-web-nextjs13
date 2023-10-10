@@ -31,6 +31,11 @@ export async function scrapeAmazonProduct(url: string) {
 
         console.log(response.data);
 
+        const $ = cheerio.load(response.data);
+
+        const title = $("#productTitle").text().trim();
+
+        console.log({ title });
 
     } catch (error: any) {
         console.log(error);
