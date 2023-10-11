@@ -38,7 +38,7 @@ export async function scrapeAmazonProduct(url: string) {
 
         const $ = cheerio.load(response.data);
 
-        const title = $("#productTitle span").text().trim();
+        const title = $("#productTitle").text().trim();
 
         const currentPrice = extractPrice(
             $('.priceToPay span.a-price-whole'),
