@@ -10,7 +10,23 @@ const Notification = {
 const THRESHOLD_PERCENTAGE = 40;
 
 export const extractPrice = (...elements: any) => {
+    for(const element of elements) {
+        const priceText = element.text().trim();
 
+        if(priceText){
+            const cleanPrice = priceText.replace(/[^\d.]/g, '');
+
+            let firstPrice;
+
+            if(cleanPrice){
+                firstPrice = cleanPrice.match(/\d+\.\d{2}/)?.[0];
+            }
+
+            return firstPrice || cleanPrice;
+        }
+    }
+
+    return '';
 };
 
 export const extractCurrency = (element: any) => {
