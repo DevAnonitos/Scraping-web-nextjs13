@@ -29,7 +29,7 @@ export async function scrapeAndStoreProduct(productUrl: string) {
         const existingProduct = await Product.findOne({ url: scrapedProduct.url, });
 
         if(existingProduct){
-
+            
         }
 
 

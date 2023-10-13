@@ -51,7 +51,7 @@ export async function scrapeAmazonProduct(url: string) {
             $('.a-price.a-text-price span.a-offscreen'),
             $('#listPrice'),
             $('#priceblock_dealprice'),
-            $('.a-size-base.a-color-price')
+            $('.a-size-base.a-color-price'),
         );
         
         const outOfStock = 

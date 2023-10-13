@@ -22,38 +22,57 @@ const productSchema = new mongoose.Schema({
         type: Number,
         required: true,
     },
-    originalPrice: { type: Number, required: true },
+    originalPrice: { 
+        type: Number, 
+        required: true, 
+    },
     priceHistory: [
         { 
             price: { 
                 type: Number, 
-                required: true 
+                required: true, 
             },
             date: { 
                 type: Date, 
-                default: Date.now 
+                default: Date.now,
             },
         },
     ],
-    lowestPrice: { type: Number },
-    highestPrice: { type: Number },
-    averagePrice: { type: Number },
-    discountRate: { type: Number },
-    description: { type: String },
-    category: { type: String },
-    reviewsCount: { type: Number },
+    lowestPrice: { 
+        type: Number, 
+    },
+    highestPrice: { 
+        type: Number, 
+    },
+    averagePrice: { 
+        type: Number, 
+    },
+    discountRate: { 
+        type: Number, 
+    },
+    description: { 
+        type: String, 
+    },
+    category: { 
+        type: String, 
+    },
+    reviewsCount: { 
+        type: Number, 
+    },
     isOutOfStock: { 
         type: Boolean, 
-        default: false 
+        default: false, 
     },
     users: [
         {email: { 
                 type: String, 
-                required: true
+                required: true,
             }
         },
     ], default: [],
-}, { timestamps: true, });
+}, { 
+    timestamps: true, 
+});
 
 const Product = mongoose.models.Product || mongoose.model('Product', productSchema);
 
