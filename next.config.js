@@ -2,6 +2,13 @@
 const nextConfig = {
     experimental: {
         serverActions: true,
+        optimizePackageImports: [
+            "mongoose", 
+            "axios", 
+            "nodemailer", 
+            "cheerio", 
+            "supports-color"
+        ],
         serverComponentsExternalPackages: ['mongoose'],
     },
     images: {

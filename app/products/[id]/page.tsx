@@ -5,33 +5,52 @@ import { redirect } from 'next/navigation';
 import { 
     Modal, 
     PriceInfoCard, 
-    ProductCard 
+    ProductCard, 
 } from '@/components';
 
 import { Product } from '@/types';
 import { formatNumber } from '@/lib/utils';
+
+import { getProductById, getSimilarProducts } from '@/lib/actions';
+
 
 type Props = {
     params: { id: string, },
 };
 
 const ProductDetails = async ({ params: { id } }: Props) => {
+
+    const product: Product = await getProductById(id);
+
+    if(!product) {
+        redirect("/");
+    }
+
+
+
     return (
         <div className='product-container'>
             <div className='flex gap-28 xl:flex-row flex-col'>
                 <div className='product-image'>
                     {/* Image-product */}
+                    <Image
+                        src={product.image}
+                        alt={product.title}
+                        width={500}
+                        height={500}
+                        className='mx-auto'
+                    />
                 </div>
 
                 <div className='flex-1 flex flex-col'>
                     <div className='flex justify-between items-start gap-5 flex-wrap pb-6'>
                         <div className='flex flex-col gap-3'>
                             <p className='text-[28px] text-secondary font-semibold'>
-                                {/* product-title */}
+                                {product.title}
                             </p>
 
                             <Link
-                                href="/"
+                                href={product.url}
                                 target='_blank'
                                 className='text-base text-black opacity-50'
                             >
@@ -49,7 +68,7 @@ const ProductDetails = async ({ params: { id } }: Props) => {
                                 />
 
                                 <p className='text-base font-semibold text-[#D46F77]'>
-                                    {/* product reviewCount */}
+                                    {product.reviewsCount}
                                 </p>
                             </div>
 
@@ -76,11 +95,11 @@ const ProductDetails = async ({ params: { id } }: Props) => {
                     <div className='product-info'>
                         <div className='flex flex-col gap-2'>
                             <p className='text-[34px] text-secondary font-bold'>
-                                {/*  */}
+                                {product.currency} {formatNumber(product.currentPrice)}
                             </p>
 
                             <p className='text-[21px] text-black opacity-50 line-through'>
-                                {/*  */}
+                                {product.currency} {formatNumber(product.originalPrice)}
                             </p>
                         </div>
 
@@ -95,7 +114,7 @@ const ProductDetails = async ({ params: { id } }: Props) => {
                                     />
 
                                     <p className='text-sm text-secondary font-semibold'>
-                                        {/*  */}
+                                        {product.stars || '25'}
                                     </p>
                                 </div>
 
@@ -108,7 +127,7 @@ const ProductDetails = async ({ params: { id } }: Props) => {
                                     />
 
                                     <p className='text-sm text-secondary font-semibold'>
-                                        {/* Reviews */}
+                                        {product.reviewsCount} Reviews
                                     </p>
                                 </div>
                             </div>
