@@ -4,6 +4,7 @@ import Navbar from "./Navbar";
 import PriceInfoCard from "./PriceInfoCard";
 import ProductCard from "./ProductCard";
 import SearchBar from "./SearchBar";
+import ProductCardSkeleton from "./ProductCardSkeleton";
 
 export {
     HeroCarousel,
@@ -12,4 +13,5 @@ export {
     PriceInfoCard,
     ProductCard,
     SearchBar,
+    ProductCardSkeleton,
 };
