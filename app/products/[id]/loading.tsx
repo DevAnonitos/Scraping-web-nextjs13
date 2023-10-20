@@ -5,7 +5,7 @@ const Loading = () => {
     return (
         <div className='w-full flex items-center justify-center'>
             <Image
-                src='assets/icons/loader.svg'
+                src='/assets/icons/loader.svg'
                 width={50}
                 height={50}
                 alt='loader'
