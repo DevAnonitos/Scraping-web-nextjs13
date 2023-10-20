@@ -9,6 +9,7 @@ const nextConfig = {
             "cheerio", 
         ],
         serverComponentsExternalPackages: ['mongoose'],
+        esmExternals: "loose",
     },
     images: {
         domains: ['m.media-amazon.com'],
