@@ -10,7 +10,7 @@ import {
     getEmailNotificationType,
 } from '../../../lib/utils';
 
-import { generateEmailBody, sendEmail } from "@/lib/nodemailer";
+import { generateEmailBody, sendEmail, } from "@/lib/nodemailer";
 
 export const maxDuration = 10;
 export const dynamic = "force-dynamic";
