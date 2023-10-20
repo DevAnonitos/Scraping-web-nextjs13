@@ -5,7 +5,7 @@ import * as cheerio from "cheerio";
 import { 
     extractPrice, 
     extractCurrency, 
-    extractDescription 
+    extractDescription, 
 } from "../utils";
 
 export async function scrapeAmazonProduct(url: string) {
