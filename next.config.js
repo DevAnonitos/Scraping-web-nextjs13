@@ -7,7 +7,6 @@ const nextConfig = {
             "axios", 
             "nodemailer", 
             "cheerio", 
-            "supports-color"
         ],
         serverComponentsExternalPackages: ['mongoose'],
     },
