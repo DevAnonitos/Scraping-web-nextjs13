@@ -14,7 +14,7 @@
     "cheerio": "^1.0.0-rc.12",
     "mongoose": "^7.5.3",
     "next": "latest",
-    "nodemailer": "^6.9.5",
+    "nodemailer": "^6.9.6",
     "react": "latest",
     "react-dom": "latest",
     "react-responsive-carousel": "^3.2.23",
@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "@types/node": "latest",
-    "@types/nodemailer": "^6.4.11",
+    "@types/nodemailer": "^6.4.13",
     "@types/react": "latest",
     "@types/react-dom": "latest",
     "autoprefixer": "latest",
