@@ -14,7 +14,7 @@
     "cheerio": "^1.0.0-rc.12",
     "mongoose": "^8.4.1",
     "next": "latest",
-    "nodemailer": "^6.9.13",
+    "nodemailer": "^6.9.14",
     "react": "latest",
     "react-dom": "latest",
     "react-responsive-carousel": "^3.2.23",
