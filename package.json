@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@headlessui/react": "^2.1.2",
-    "axios": "^1.7.2",
+    "axios": "^1.7.3",
     "cheerio": "^1.0.0-rc.12",
     "mongoose": "^8.5.1",
     "next": "latest",
